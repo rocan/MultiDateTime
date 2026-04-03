@@ -1,0 +1,41 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode
+*.xcodeproj/
+*.xcworkspace/
+DerivedData/
+build/
+*.pbxuser
+*.mode1v2
+*.mode2v2
+*.perspectivev3
+*.xcuserstate
+*.xccheckout
+*.moved-to-trash
+xcuserdata/
+
+# Build artifacts
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# CocoaPods
+Pods/
+Podfile.lock
+
+# Secrets / personal data
+*.p12
+*.mobileprovision
+*.pem
+*.cer
+*.key
+
+# Entitlements (contain personal team/group IDs — set locally)
+**/*.entitlements
