@@ -17,7 +17,7 @@ struct LockScreenCircularView: View {
                         .minimumScaleFactor(0.7)
                         .widgetAccentable()
                     Text(entry.date, style: .time)
-                        .font(.system(size: 12, weight: .medium, design: .rounded))
+                        .font(.system(size: 12, weight: .bold, design: .rounded))
                         .minimumScaleFactor(0.6)
                         .lineLimit(1)
                         .environment(\.timeZone, clock.timeZone)
@@ -52,13 +52,13 @@ struct LockScreenRectangularView: View {
                         .widgetAccentable()
                     HStack(spacing: 6) {
                         Text(entry.date, style: .time)
-                            .font(.system(size: 13, weight: .light, design: .rounded))
+                            .font(.system(size: 13, weight: .bold, design: .rounded))
                             .environment(\.timeZone, clock.timeZone)
                         Text(entry.date.formatted(
                             Date.FormatStyle(timeZone: clock.timeZone)
                                 .weekday(.abbreviated).month(.abbreviated).day()
                         ))
-                        .font(.system(size: 13, weight: .light, design: .rounded))
+                        .font(.system(size: 13, weight: .bold, design: .rounded))
                         .foregroundStyle(.secondary)
                     }
                 }

@@ -29,7 +29,12 @@ class ClockStore: ObservableObject {
             ("Asia/Tokyo", "Tokyo"),
         ]
         entries = seeds.enumerated().map { index, seed in
-            ClockEntry(timeZoneIdentifier: seed.identifier, cityLabel: seed.city, sortOrder: index)
+            ClockEntry(
+                timeZoneIdentifier: seed.identifier,
+                cityLabel: seed.city,
+                airportCode: ClockEntry.iataCode(for: seed.identifier) ?? String(seed.city.prefix(3)).uppercased(),
+                sortOrder: index
+            )
         }
         persist()
     }
@@ -60,6 +65,7 @@ class ClockStore: ObservableObject {
         let entry = ClockEntry(
             timeZoneIdentifier: identifier,
             cityLabel: cityLabel,
+            airportCode: ClockEntry.iataCode(for: identifier) ?? String(cityLabel.prefix(3)).uppercased(),
             sortOrder: entries.count
         )
         entries.append(entry)

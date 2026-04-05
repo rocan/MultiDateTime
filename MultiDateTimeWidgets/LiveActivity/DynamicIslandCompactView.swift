@@ -17,7 +17,7 @@ struct DynamicIslandCompactView: View {
         switch position {
         case .leading:
             if let entry = primaryEntry {
-                Text(entry.cityLabel.prefix(3).uppercased())
+                Text(entry.airportCode)
                     .font(.caption2)
                     .fontWeight(.semibold)
             }

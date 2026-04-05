@@ -13,10 +13,10 @@ struct LockScreenView: View {
                         .font(.caption)
                         .foregroundStyle(.secondary)
                     Text(context.state.lastUpdated, style: .time)
-                        .font(.system(size: 18, weight: .light, design: .rounded))
+                        .font(.system(size: 18, weight: .bold, design: .rounded))
                         .environment(\.timeZone, entry.timeZone)
                     Text(dateString(from: context.state.lastUpdated, in: entry.timeZone))
-                        .font(.caption2)
+                        .font(.system(size: 18, weight: .bold, design: .rounded))
                         .foregroundStyle(.secondary)
                 }
                 .frame(maxWidth: .infinity)
